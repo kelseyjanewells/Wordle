@@ -82,6 +82,16 @@ button {
     font-size: 20px;
     font-weight: bold;
 }
+
+#message a {
+    color: #58b368;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#message a:hover {
+    text-decoration: underline;
+}
 </style>
 </head>
 
@@ -142,8 +152,8 @@ function submitGuess() {
     }
 
     if (guess === answer) {
-        document.getElementById("message").textContent =
-            "❤️ You guessed it! The word was SORRY.";
+        const messageDiv = document.getElementById("message");
+        messageDiv.innerHTML = '❤️ You guessed it! The word was SORRY. <a href="https://www.youtube.com/watch?v=fFu_sm_wiAk" target="_blank">How life feels without u dimicock</a>';
         input.disabled = true;
         return;
     }
